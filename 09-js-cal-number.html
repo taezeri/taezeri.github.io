@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09-js-cal-number.html</title>
+    <script>
+        function plus(n1, n2) {
+            document.getElementById("output").innerHTML = 
+             parseInt(n1) + parseInt(n2)
+        }
+
+        function del(n1, n2) {
+            document.getElementById("output").innerHTML = 
+             parseInt(n1) - parseInt(n2)
+        }
+
+        function multiply(n1, n2) {
+            document.getElementById("output").innerHTML = 
+             parseInt(n1) * parseInt(n2)
+        }
+
+        function divide(n1, n2) {
+            document.getElementById("output").innerHTML = 
+             parseInt(n1) / parseInt(n2)
+        }
+    </script>
+</head>
+<body>
+    Num1 : <input type="text" name="" id="num1">
+    <br>
+    <br>  
+    Num2 : <input type="text" name="" id="num2">
+    <br>
+    <br> 
+    <button onclick="plus(document.getElementById('num1').value, 
+    document.getElementById('num2').value)">+</button>
+    <button onclick="del(document.getElementById('num1').value, 
+    document.getElementById('num2').value)">-</button>
+    <br>
+    <br> 
+    <button onclick="multiply(document.getElementById('num1').value, 
+    document.getElementById('num2').value)">*</button>
+    <button onclick="divide(document.getElementById('num1').value, 
+    document.getElementById('num2').value)">/</button>
+    <br>
+    <br> 
+    Ans : <span id="output"></span>
+</body>
+</html>
