@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>19-basic-form.html</title>
+    <script>
+        function display_data() {
+            const urlParameter = new URLSearchParams(window.location.search)
+            document.getElementById("output1").innerHTML = urlParameter.get("sid")
+            document.getElementById("output2").innerHTML = urlParameter.get("sname")
+            document.getElementById("output3").innerHTML = urlParameter.get("phone")
+        }
+    </script>
+</head>
+<body onload="display_data()">
+    <!-- ถ้ามีข้อมูลส่งแบบ get จะเอาไปแสดงผลบนหน้าเว็บ -->
+    <p id="output1"></p>
+    <p id="output2"></p>
+    <p id="output3"></p>
+
+</body>
+</html>
