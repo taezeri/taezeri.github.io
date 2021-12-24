@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>34-js-get-student-storage-array.html</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm&display=swap" rel="stylesheet">
+ 
+ <style>
+     .jumbotron{
+         position: relative;
+         overflow: hidden;
+     }
+     video {
+         position: absolute;
+         z-index: 1;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+     }
+     .container{
+         z-index: 2;
+         position: relative;
+     }
+     .display-1{
+         color:white;
+     }
+     body{
+         color: black;
+         font-family: 'Charm', cursive;
+        font-size: 18px;
+        font-style: bold;
+        background-color: rgb(133, 174, 228);
+     }
+ </style>
+
+
+</head>
+  <body onload="get_employee()">
+
+    
+      
+    <div class="jumbotron jumbotron-fluid mb-0" style="background-color: skyblue;">
+        <video style="display: inline-block;" ref="video" class="videoplayer" id="video" controlsList="nodownload" autoplay loop muted>
+            <source type="video/mp4" src="https://cdn.videvo.net/videvo_files/video/free/2016-05/large_watermarked/506401051_1_preview.mp4">
+            </video>
+        <div class="container">
+
+
+
+          <h1 class="display-1">Chanachai Wongphijit</h1>
+          <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        </div>
+      </div>
+
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(119, 140, 255); ">
+        <a class="navbar-brand" href="#">Chanachai</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-apple" viewBox="0 0 16 16">
+                <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282z"/>
+                <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282z"/>
+              </svg>
+              Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+          <!-- <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form> -->
+        </div>
+      </nav>
+<form action="31-js-input-student.html">
+      <div class="container p-2">
+        <div class="row">
+
+            <div class="col-sm-6 mx-auto">
+                <div class="card mt-5 w-100 h-100" style="width: 18rem;">
+                  <img style="height: 50px;" src="https://img.freepik.com/free-vector/gradient-dynamic-blue-lines-background_23-2148995756.jpg?size=626&ext=jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">แสดงข้อมูลพนักงาน</h5>
+                   <p class="card-text">
+                       <p id="output"></p>
+
+                       <table id="emp_table" class="table table-striped table-success table-bordered">
+                        <thead class="bg-primary text-light">
+                            <tr>
+                                <th>รหัสพนักงาน</th>
+                                <th>ชื่อพนักงาน</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           
+
+                        </tbody>
+                    </table>
+
+                   </p>
+                   <a class="btn btn-danger" href="33-js-set-student-storage-array.html">BACK</a>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+      </div>
+</form>
+      
+
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  </body>
+  <script>
+    let employee
+    let emp = []
+    let emp_tb
+    let row
+    let cell1
+    let cell2
+
+    function get_employee() {
+        employee = localStorage.getItem('employee')
+        emp = eval(employee)
+        emp_tb = document.getElementById('emp_table').getElementsByTagName('tbody')[0]
+        if (emp != null) {
+            for (let i of emp) {
+                row = emp_tb.insertRow()
+                cell1 = row.insertCell()
+                cell2 = row.insertCell()
+                cell1.innerHTML = i.empid
+                cell2.innerHTML = i.empname
+                // document.getElementById('output').innerHTML += i.empid + ' ' + i.empname + '<br>'
+            }
+        } else {
+            document.getElementById('output').innerHTML = 'ไม่พบข้อมูลพนักงาน'
+        }
+    }
+
+</script>
+</html>
